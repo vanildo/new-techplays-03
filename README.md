@@ -11,8 +11,7 @@ from the IBM enterprise git repo, but that is a separate excercise. After this c
 
 ```
 oc new-app --name=simple https://github.com/<your github.com id>/docker-builds-openshift.git --as-deployment-config
-oc expose svc simple
-oc patch route simple --type=json -p '[{"op": "add", "path": "/spec/tls", "value": {"termination": "edge"}}, {"op": "add", "path": "/spec/port", "value": {"targetPort": "9080-tcp"}}]'
+oc create route edge --service=simple
 ```
 
 And then, `curl -k https://<hostname for route>/simple-stuff/simple/simon`. This should produce the string "/my-special-folder does not exist"
