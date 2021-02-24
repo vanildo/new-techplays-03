@@ -10,8 +10,8 @@ repo to your local disk and then use that to create a publicly visible git rep o
 from the IBM enterprise git repo, but that is a separate excercise. After this code is in the github.com repo, run the following instructions.
 
 ```
-oc new-app --name=simple https://github.com/<your github.com id>/docker-builds-openshift.git --as-deployment-config
-oc create route edge --service=simple
+oc new-app --name=simple-stuff https://github.com/<your github.com id>/docker-builds-openshift.git --as-deployment-config
+oc create route edge --service=simple-stuff
 ```
 
 And then, `curl -k https://<hostname for route>/simple-stuff/simple/simon`. This should produce the string "/my-special-folder does not exist"
