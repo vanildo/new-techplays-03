@@ -21,9 +21,13 @@ And then, `curl -k https://<hostname for route>/simple-stuff/simple/simon`. This
 
 1. In the docker build, create a directory called /my-special-folder. Copy the Dockerfile in this git repo into that folder. Note that you will need to create this
 folder as the root user, otherwise, your creation of the directory will fail during the build.
+
 2. Repeat the new-app, expose, and patch commands provided at the top of this file.
+
 3. Repeat steps 1 and 2, but this time, call the app "even-simpler". What you have done with this step is to use the same git repo to create two different running instances (or applications) 
 of the code.
+
 4. Look for the image stream corresponding to "even-simpler". Use the "new-app" command and point to this imagestream and create a third instance of the application. Call this application
 instance "simplest-of-all".
-4. Provide the output of the "curl" command shown above for the "simple", "even-simpler", and "simplest-of-all" apps.
+
+5. Provide the output of the "curl" command shown above for the "simple", "even-simpler", and "simplest-of-all" apps.
